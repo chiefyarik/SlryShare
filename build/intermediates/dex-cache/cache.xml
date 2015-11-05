@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Programming\My Workspace\SalaryShare\app\build\intermediates\exploded-aar\fr.avianey.com.viewpagerindicator\library\2.4.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="86f452c126cb92a79e1dcf08efec5404529b698e">
+        <dex dex="C:\Programming\My Workspace\SalaryShare\app\build\intermediates\pre-dexed\debug\classes-2f6271ecccf26c4ae1f65c3d21a743c084bbd2d1.jar" />
+    </item>
+
+</items>
