@@ -155,26 +155,21 @@ public class SalaryListFragment extends Fragment implements
         listAdapter.SetOnItemClickListener(new CustomAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
-                v.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Salary salary = (Salary) v.getTag();
-                        Intent i = new Intent(context, ViewSalary.class);
-                        i.putExtra(ViewSalary.FIELD_NAME, salary.getField());
-                        i.putExtra(ViewSalary.POS_NAME, salary.getPosition());
-                        i.putExtra(ViewSalary.SALARY_NUM, salary.getSalary()); // Pass salary num
-                        i.putExtra(ViewSalary.EXP_NUM, salary.getExperience());     // Pass exp num
-                        i.putExtra(ViewSalary.SALARY_ID, salary.getSalaryId());
-                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        context.startActivity(i);
-                    }
-                });
+                Salary salary = (Salary) v.getTag();
+                Intent i = new Intent(context, ViewSalary.class);
+                i.putExtra(ViewSalary.FIELD_NAME, salary.getField());
+                i.putExtra(ViewSalary.POS_NAME, salary.getPosition());
+                i.putExtra(ViewSalary.SALARY_NUM, salary.getSalary()); // Pass salary num
+                i.putExtra(ViewSalary.EXP_NUM, salary.getExperience());     // Pass exp num
+                i.putExtra(ViewSalary.SALARY_ID, salary.getSalaryId());
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(i);
+
+
             }
-
         });
-
-
     }
+
     private void setLocation(final SalaryLocation peekLocation) {
         if (peekLocation != null) {
             // If no location is set and there is a peek location...
